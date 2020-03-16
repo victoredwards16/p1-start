@@ -13,6 +13,9 @@ stress= data[0:maxrange,3]
 strain= data[0:maxrange,7]
 
 plt.plot(stress,strain, color= 'b', linestyle= '-', label='Glass Data')
+plt.xlabel("Strain [Ext %]")
+plt.ylabel("Stress [MPa]")
+
 plt.legend(loc='best')
 plt.show()
 
