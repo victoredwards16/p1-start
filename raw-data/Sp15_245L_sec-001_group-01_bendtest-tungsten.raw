@@ -8376,7 +8376,7 @@
 "Comment:",""
 "Included"
 "Time sec","Extension mm","Load N","Stress MPa","Cycle Count ","Total Cycle Count ","Repetitions Count ","Strain [Exten.] %","Tenacity gf/tex"
-0,0,-4.965317,-252881.5,0,0,0,0,-4556.893
+
 0.006,0,-4.979633,-253610.6,0,0,0,0,-4570.031
 0.01,0,-4.992541,-254268,0,0,0,0,-4581.877
 0.014,0,-5.007477,-255028.7,0,0,0,0,-4595.585
