@@ -2,8 +2,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
-data = np.loadtxt(filename)   # Attempts to load filename into local variable data.
+filename = sys.argv[1]     
+  # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
+data = np.loadtxt(filename,skiprows=32,delimiter=',')   # Attempts to load filename into local variable data.
+#some help to make it like the second.
+maxrange = (len(data)-1)
+stress= data[0:maxrange,3]
+strain= data[0:maxrange,7]
+plt.plot(stress,strain, color= 'b', linestyle= '-', label='Glass Data')
+plt.legend(loc='best')
+plt.show()
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
@@ -22,6 +30,7 @@ data = np.loadtxt(filename)   # Attempts to load filename into local variable da
 # plt.plot(xdata,ydata, arguments-to-make-plot-pretty)
 
 
+
 ## Part 2
 # Check to see if your code in part 1 will plot all of the files in raw-data/
 # Edit the files (use git liberally here!) to make them more usable
@@ -30,8 +39,8 @@ data = np.loadtxt(filename)   # Attempts to load filename into local variable da
 ## Part 3
 # Use linear regression to calculate the slope of the linear part of
 # the stress-strain data. Plot your line against the data to make 
-# sure it makes sense! Use the slope of this line to calculate and print
-# the Young's modulus (with units!)
+# sure it imakes sense! Use the slope of this line to calculate and print
+# the )Young's modulus (with units!)
 
 
 ## Part 4
