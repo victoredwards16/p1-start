@@ -12,7 +12,10 @@ maxrange = (len(data)-1)
 stress= data[0:maxrange,3]
 strain= data[0:maxrange,7]
 
-plt.plot(stress,strain, color= 'b', linestyle= '-', label='Glass Data')
+iDash= filename.rindex('-')
+mylabel= filename[iDash+1:-4]
+
+plt.plot(stress,strain, color= 'b', linestyle= '-', label=mylabel)
 plt.xlabel("Strain [Ext %]")
 plt.ylabel("Stress [MPa]")
 
