@@ -6,6 +6,7 @@ filename = sys.argv[1]
   # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename,skiprows=32,delimiter=',')   # Attempts to load filename into local variable data.
 #some help to make it like the second.
+
 maxrange = (len(data)-1)
 stress= data[0:maxrange,3]
 strain= data[0:maxrange,7]
