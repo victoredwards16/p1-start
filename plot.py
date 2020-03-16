@@ -9,6 +9,7 @@ data = np.loadtxt(filename,skiprows=32,delimiter=',')   # Attempts to load filen
 maxrange = (len(data)-1)
 stress= data[0:maxrange,3]
 strain= data[0:maxrange,7]
+
 plt.plot(stress,strain, color= 'b', linestyle= '-', label='Glass Data')
 plt.legend(loc='best')
 plt.show()
