@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
+
 filename = sys.argv[1]     
   # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 
@@ -50,7 +51,7 @@ plt.show()
 # the stress-strain data. Plot your line against the data to make 
 # sure it imakes sense! Use the slope of this line to calculate and print
 # the )Young's modulus (with units!)
-
+fit=numpy.polyfit(Strain,Stress,1)
 
 ## Part 4
 # Modify your code to save your plots to a file and see if you can generate
