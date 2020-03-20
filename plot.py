@@ -51,13 +51,12 @@ plt.show()
 # the stress-strain data. Plot your line against the data to make 
 # sure it imakes sense! Use the slope of this line to calculate and print
 # the )Young's modulus (with units!)
-fit=numpy.polyfit(Strain,Stress,1)
+fit=np.polyfit(strain,stress,1)
+liney=np.polyval(fit,np.linspace(min(strain),max(strain)))
 
 ## Part 4
 # Modify your code to save your plots to a file and see if you can generate
 # plots and Young's moduli for all of the cleaned up files in your data 
 # directory. If you haven't already, this is a good time to add text to 
 # your .gitignore file so you're not committing the figures to your repository.
-
-
 
