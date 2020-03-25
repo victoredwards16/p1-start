@@ -53,7 +53,7 @@ plt.legend(loc='best')
 # sure it imakes sense! Use the slope of this line to calculate and print
 # the )Young's modulus (with units!)
 
-fit =np.polyfit(strain,stress,1)
+fit =np.polyfit(stress,strain,1)
 linex=np.linspace(min(stress),max(stress))
 liney=np.polyval(fit,linex)
 
