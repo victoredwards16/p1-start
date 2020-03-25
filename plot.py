@@ -54,8 +54,8 @@ plt.legend(loc='best')
 # the )Young's modulus (with units!)
 
 fit =np.polyfit(strain,stress,1)
-linex=np.linspace(min(strain),max(strain))
-liney=np.polyval(fit,np.linspace(min(strain),max(strain)))
+linex=np.linspace(min(stress),max(stress))
+liney=np.polyval(fit,linex)
 
 plt.plot(linex,liney, color='r', linestyle='-')
 #plt.savefig(filename+ '.pdf')
