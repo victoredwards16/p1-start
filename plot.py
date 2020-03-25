@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
@@ -19,9 +20,9 @@ mylabel= filename[iDash+1:-4]
 plt.plot(stress,strain, color= 'b', linestyle= '-', label=mylabel)
 plt.xlabel("Strain [Ext %]")
 plt.ylabel("Stress [MPa]")
-
+plt.grid(True)
 plt.legend(loc='best')
-plt.show()
+
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
@@ -51,9 +52,14 @@ plt.show()
 # the stress-strain data. Plot your line against the data to make 
 # sure it imakes sense! Use the slope of this line to calculate and print
 # the )Young's modulus (with units!)
-fit=np.polyfit(strain,stress,1)
+
+fit =np.polyfit(strain,stress,1)
+linex=np.linspace(min(strain),max(strain))
 liney=np.polyval(fit,np.linspace(min(strain),max(strain)))
 
+plt.plot(linex,liney, color='r', linestyle='-')
+#plt.savefig(filename+ '.pdf')
+plt.show()
 ## Part 4
 # Modify your code to save your plots to a file and see if you can generate
 # plots and Young's moduli for all of the cleaned up files in your data 
