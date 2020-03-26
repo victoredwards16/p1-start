@@ -58,7 +58,7 @@ linex=np.linspace(min(stress),max(stress))
 liney=np.polyval([first,second] ,linex)
 
 plt.plot(linex,liney, color='r', linestyle='-')
-#plt.savefig(filename+ '.pdf')
+plt.savefig(filename+ '.pdf')
 plt.show()
 ## Part 4
 # Modify your code to save your plots to a file and see if you can generate
