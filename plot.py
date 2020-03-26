@@ -11,8 +11,8 @@ data = np.loadtxt(filename,skiprows=32,delimiter=',')   # Attempts to load filen
 #some help to make it like the second.
 
 maxrange = (len(data)-1)
-stress= data[0:maxrange,3]
-strain= data[0:maxrange,7]
+stress=- data[0:maxrange,3]
+strain=- data[0:maxrange,7]
 
 iDash= filename.rindex('-')
 mylabel= filename[iDash+1:-4]
@@ -53,9 +53,9 @@ plt.legend(loc='best')
 # sure it imakes sense! Use the slope of this line to calculate and print
 # the )Young's modulus (with units!)
 
-fit =np.polyfit(stress,strain,1)
+first, second =np.polyfit(stress,strain,1)
 linex=np.linspace(min(stress),max(stress))
-liney=np.polyval(fit,linex)
+liney=np.polyval([first,second] ,linex)
 
 plt.plot(linex,liney, color='r', linestyle='-')
 #plt.savefig(filename+ '.pdf')
@@ -65,4 +65,4 @@ plt.show()
 # plots and Young's moduli for all of the cleaned up files in your data 
 # directory. If you haven't already, this is a good time to add text to 
 # your .gitignore file so you're not committing the figures to your repository.
-#print ("Young's Modulus : "+str(fit))
+#print ("Young's Modulus : "+str(first)+ str('MPa'))
