@@ -65,4 +65,4 @@ plt.show()
 # plots and Young's moduli for all of the cleaned up files in your data 
 # directory. If you haven't already, this is a good time to add text to 
 # your .gitignore file so you're not committing the figures to your repository.
-#print ("Young's Modulus : "+str(first)+ str('MPa'))
+print ("Young's Modulus : "+str(first)+ str('MPa'))
