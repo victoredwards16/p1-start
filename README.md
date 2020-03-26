@@ -1,4 +1,4 @@
-#Project 1
+# Project 1
 * Software Used: XQuarts
 * Accessing the code: Make sure you have VPN access by signing into Boise State offcampus (or oncampus) VPN. Then download XQuarts (if you have a mac like myself), and open a new terminal by going to the 'Applications' menu. Once you have a terminal open, sign in using an ssh key with your Boise State username. Once you have logged on you can find the code in the folder 'p1-start' which you can get to by using the command 'cd' to change the directory to 'p1-start'. Once you have entered this file you can start using the code to graph data and find the Youngs Modulus from the data. The code is stored in 'plot.py', in order to get to the code and edit it if needed type "vim plot.py." To edit press 'i', to get out (and save) press 'esc' then ":wq".
 * Running the data: Now that "p1-start" is open you can start using the code. In order to use the code type "python plot.py rawdata/" then type in whatever file you want to run. Once you press enter, the code will run and you should get both a graph, and a value for the Youngs Modulus.
